@@ -69,7 +69,7 @@ module.exports = defineConfig({
 })
 ```
 
-`__dirname` will still be the folder of your vite.config.js file when resolving the input paths.
+`__dirname` will be the folder of your vite.config.js file when resolving the input paths.
 
 ### Development
 
@@ -91,4 +91,4 @@ And you will see the generated file in `dist` that ready to be served.
 
 ### Deploy on Netlify
 
-Go to [Netlify](https://app.netlify.com/start) and select your clone, `OK` along the way, and your App will be live in a minute.
+Go to [Netlify](https://app.netlify.com/start) and select your repo, `OK` along the way, and your App will be live in a minute.
