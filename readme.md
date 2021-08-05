@@ -3,6 +3,7 @@
 - ⚡️ [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/) - born with fastness
 - 🎨 [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
 - 😃 [Use icons from https://css.gg/app](https://css.gg/app)
+- ☁️ Deploy on Netlify, zero-config
 
 <br>
 
@@ -29,6 +30,46 @@ cd vite-wind-boilerplate
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
 ## Usage
+
+## Multi-Page App
+Suppose you have the following source code structure:
+
+```
+├── package.json
+├── vite.config.js
+├── index.html
+├── second.html
+├── third.html
+├── ...
+└── nested
+    ├── fourth.html
+    └── ...
+```
+
+During dev, simply navigate or link to `/nested/` - it works as expected, just like for a normal static file server.
+
+During build, all you need to do is to specify multiple `.html` files as entry points:
+
+```js
+// vite.config.js
+const { resolve } = require('path')
+const { defineConfig } = require('vite')
+
+module.exports = defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        index: resolve(__dirname ,'index.html'),
+        second: resolve(__dirname, 'second.html'),
+        third: resolve(__dirname, 'third.html'),
+        fourth: resolve(__dirname, 'nested/fourth.html')
+      }
+    }
+  }
+})
+```
+
+`__dirname` will still be the folder of your vite.config.js file when resolving the input paths.
 
 ### Development
 
