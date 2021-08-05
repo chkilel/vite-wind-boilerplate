@@ -1,3 +1,20 @@
+<p align='center'>
+  <img src='https://vitejs.dev/logo.svg' alt='Vite' width='100'/>
+  <img src='https://windicss.org/assets/logo.svg' alt='Vite' width='100'/>
+</p>
+
+<h2 align='center'>
+ViteWind boilerplate
+</h2>
+
+<br>
+
+<p align='center'>
+<a href="https://vitewind.netlify.app/">Live Demo</a>
+</p>
+
+
+
 ## Features
 
 - ⚡️ [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/) - born with fastness
